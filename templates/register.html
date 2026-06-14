@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registracija - MalicaMeter</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        h1 { color: #333; }
+    </style>
+
+    </head>
+<body>
+    <div class="container">
+        <h1>📝 Registracija</h1>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Uporabniško ime" required>
+            <input type="password" name="password" placeholder="Geslo" required>
+            <button type="submit">Registriraj se</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px;">
+            Že imaš račun? <a href="/login">Prijavi se</a>
+        </p>
+    </div>
+</body>
+</html>
