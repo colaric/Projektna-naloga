@@ -13,3 +13,16 @@ ratings = db.table('ratings')
 User = Query()
 Meal = Query()
 Rating = Query()
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+        
+        if users.search(User.username == username):
+            return "Uporabnik ze obstaja"
+        
+        users.insert({'username': username, 'password': password})
+        return redirect(url_for('login'))
+    return render_template('register.html')
